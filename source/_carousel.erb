@@ -1,0 +1,23 @@
+<header class="cycle-slideshow" data-cycle-pause-on-hover="true" data-cycle-slides="> .slide" data-cycle-center-horz="true" data-cycle-center-vert="false" data-cycle-swipe="true" data-cycle-timeout="5000">
+  <% content_tag :div, class: 'slide slide1' do %>
+    <%= image_tag 'slide-1.jpg' %>
+    <div class="container">
+      <div class="text">
+        <h2>Your Vinyl Superhero</h2>
+        <p>Siderman is your maintenance-free vinyl superhero. Windows to siding and everything in between: we’ve got you covered!</p>
+        <p><% link_to 'Learn More', '/' %></p>
+      </div>
+    </div>
+  <% end %>
+  <% content_tag :div, class: 'slide slide2' do %>
+    <%= image_tag 'slide-1.jpg' %>
+    <div class="container">
+      <div class="text">
+        <h2>Your Vinyl Superhero</h2>
+        <p>Siderman is your maintenance-free vinyl superhero. Windows to siding and everything in between: we’ve got you covered!</p>
+        <p><% link_to 'Learn More', '/' %></p>
+      </div>
+    </div>
+  <% end %>
+  <div class="cycle-pager"></div>
+</header>

@@ -1,0 +1,24 @@
+.align-right { text-align:right; }
+@media (max-width: $screen-sm-max) {
+ .align-center-sm { text-align:center; }
+}
+
+#body {
+  font-size:24px;
+  > section {
+    padding:30px 0;
+    &.intro-section { font-size:24px; line-height:1.5; }
+    &.large-spacing { padding:50px 0; }
+    &.black {
+      background:$siderman-black; color:white;
+    }
+    // &.white {
+    //   background:white; color:black; position:relative;
+    //   &:before {
+    //     content:""; display:block; height:32px; width:100%; background:image-url('shadow-light.png'); background-repeat:no-repeat; background-position:center; position:absolute; top:0;
+    //   }
+    //   h2 { color:$xerri-blue; }
+    //   h3 { color:inherit; }
+    // }
+  }
+}

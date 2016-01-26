@@ -1,0 +1,12 @@
+#home_graphic {
+  > div {
+    border:10px solid $siderman-black;
+    &.who-are-we { background:#bbbdbf; padding:200px 45px 10px 50px; border-bottom:0; }
+    &.middle {
+      border:0;
+      img { max-width:100%; height:auto; }
+    }
+    &.bottom-left { background:$siderman-black; float:left; border-top:0; }
+    &.bottom-right { background:$siderman-red; float:right; border-top:0; }
+  }
+}
