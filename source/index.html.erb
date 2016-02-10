@@ -3,33 +3,61 @@ title: Siderman Vinyl
 ---
 
 <%= partial 'carousel' %>
-
-<section class="large-spacing black">
-  <div class="container align-center-sm">
-    <div class="row">
-      <div class="col-md-9">
-        <h2 style="margin:0;line-height:40px;">Learn more about how Siderman can save the day.</h2>
-      </div>
-      <div class="col-md-3 align-right">
-        <a class="btn btn-lg blue" href="#">CLICK HERE!</a>
-      </div>
+<div id="home">
+  <div id="superhero-graphic">
+    <div class="container">
+      <%= image_tag 'superhero/top.png', class: 'top' %>
+      <div class='middle' style="background-image:url('../images/superhero/middle.png');"></div>
+      <%= image_tag 'superhero/bottom.png', class: 'bottom' %>
     </div>
   </div>
-</section>
-
-<section class="large-spacing">
-  <div class="container">
-    <div id="home_graphic">
-      <div class="top who-are-we">
-        Heloo there
-      </div>
-      <div class="middle"><%= image_tag 'home-graphic-middle.png' %></div>
-      <div class="bottom-left">
-        <p>Hello</p>
-      </div>
-      <div class="bottom-right">
-        <p>Hello</p>
+  <section class="large-spacing black">
+    <div class="container align-center-sm">
+      <div class="row">
+        <div class="col-md-9">
+          <h2 style="margin:0;line-height:40px;">Learn more about how Siderman can save the day.</h2>
+        </div>
+        <div class="col-md-3 align-right">
+          <a class="btn btn-lg blue" href="#">CLICK HERE!</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="large-spacing">
+    <div class="container">
+      <div id="home_graphic">
+        <div class="top">
+          <%= image_tag "home-graphic/who-are-we.png", width: "400px", height: "110px", alt: "Who Are We?" %>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div class="middle"><%= image_tag 'home-graphic/middle.png' %></div>
+        <div class="bottom-left">
+          <%= image_tag "home-graphic/our-services.png", width: "415px", height: "92px", alt: "Our Services" %>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+          <p><%= link_to 'Learn more' %></p>
+        </div>
+        <div class="bottom-right">
+          <%= image_tag "home-graphic/testimonials.png" %>
+          <div class="testimonials">
+            <p>
+              “Thank you for your very professional job.  It looks great.  I will happily recommend your services.”<br>
+              - Rosa
+            </p>
+          </div>
+          <p><%= link_to 'Read more testimonials.' %></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="large-spacing gray">
+    <div class="container" style="text-align:center;">
+      <p>
+        <i>
+          <b>&ldquo;A hero is an ordinary individual who ﬁnds the strength to persevere and endure in spite of overwhelming obstacles.&rdquo;</b><br>
+          Christopher Reeve
+        </i>
+      </p>
+    </div>
+  </section>
+</div>

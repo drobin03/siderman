@@ -2,7 +2,7 @@
   z-index:0; // So that menu items appear on top
   .slide {
     position:relative;
-    img {display: block; min-width:0; }
+    img {display: block; min-width:0; max-width:100%; }
   }
   .slide .text {
     padding:74px 42px 0 33px; position:absolute; top:150px; left:0; width:452px;

@@ -1,12 +1,45 @@
 #home_graphic {
   > div {
-    border:10px solid $siderman-black;
-    &.who-are-we { background:#bbbdbf; padding:200px 45px 10px 50px; border-bottom:0; }
-    &.middle {
-      border:0;
-      img { max-width:100%; height:auto; }
+    border:10px solid $siderman-black; position:relative; padding:0px 50px;
+    &.top { background:$siderman-gray; padding-top:90px; padding-bottom:10px; border-bottom:0; }
+    &.middle { border:0; padding:0; }
+    &.bottom-left { background:$siderman-black; color:white; float:left; border-top:0; padding-top:60px; padding-bottom:10px; }
+    &.bottom-right { background:$siderman-red; float:right; border-top:0; padding:40px 10px 0px 50px; margin-top:-23px; }
+
+    &.top img { position:absolute; top:-30px; left:-30px; }
+    &.middle img { max-width:100%; height:auto; }
+    &.bottom-left img { position:absolute; top:-47px; right:-15px; }
+    &.bottom-right img { position:absolute; margin-top:-80px; margin-left:-40px; width:413px; z-index:1; }
+
+    &.bottom-left a { color:$siderman-red; }
+    &.bottom-right a { color:white; }
+
+    &.bottom-right .testimonials { position:relative; z-index:2; margin-top:-50px; height:215px; }
+  }
+}
+
+#home {
+  position:relative;
+  #superhero-graphic {
+    display:none;
+    @media (min-width: $screen-md-min) {
+      position:absolute; width:100%; top:-195px; display:block; height:100%;
+      .container {
+        position:relative; height:100%;
+        img,
+        div.middle {
+          position:absolute; right:0; display:block; width:500px;
+          &.top { top:0; }
+          &.bottom { bottom:0; }
+        }
+        .middle { background-size:100%; }
+      }
     }
-    &.bottom-left { background:$siderman-black; float:left; border-top:0; }
-    &.bottom-right { background:$siderman-red; float:right; border-top:0; }
+    @media (min-width: $screen-lg-min) {
+      .container {
+        img,
+        div.middle { right:-100px; }
+      }
+    }
   }
 }

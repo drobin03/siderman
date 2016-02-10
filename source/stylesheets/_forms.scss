@@ -1,0 +1,15 @@
+input { background:transparent; color:white; border:2px solid white; font-weight:bold; padding:3px 5px; margin-bottom:0.5em; width:100%; }
+input[type="submit"] { background:$siderman-blue; color:white; width:auto; }
+
+::-webkit-input-placeholder {
+  color: white;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: white;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+  color: white;
+}
+:-ms-input-placeholder {
+  color: white;
+}
