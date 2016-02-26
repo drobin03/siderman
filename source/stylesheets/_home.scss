@@ -9,12 +9,14 @@
     &.top img { position:absolute; top:-30px; left:-30px; }
     &.middle img { max-width:100%; height:auto; }
     &.bottom-left img { position:absolute; top:-47px; right:-15px; }
-    &.bottom-right img { position:absolute; margin-top:-80px; margin-left:-40px; width:413px; z-index:1; }
+    &.bottom-right img { position:absolute; margin-top:-80px; margin-left:-40px; width:413px; }
 
+    &.top a { color:$siderman-blue; }
     &.bottom-left a { color:$siderman-red; }
     &.bottom-right a { color:white; }
 
-    &.bottom-right .testimonials { position:relative; z-index:2; margin-top:-50px; height:215px; }
+    &.bottom-right .testimonials { position:relative; margin-top:-50px; height:190px; margin-bottom:30px; }
+    &.bottom-right > p { position:relative; }
   }
 }
 
@@ -23,13 +25,13 @@
   #superhero-graphic {
     display:none;
     @media (min-width: $screen-md-min) {
-      position:absolute; width:100%; top:-195px; display:block; height:100%;
+      position:absolute; width:100%; display:block; height:100%;
       .container {
         position:relative; height:100%;
         img,
         div.middle {
           position:absolute; right:0; display:block; width:500px;
-          &.top { top:0; }
+          &.top { top:-195px; }
           &.bottom { bottom:0; }
         }
         .middle { background-size:100%; }

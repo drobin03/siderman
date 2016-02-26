@@ -1,0 +1,30 @@
+<div id="contact_modal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Have a question?</h3>
+      </div>
+      <div class="modal-body">
+        <p>Fill out the form below, or give us a call to get in touch!</p>
+        <p><i class="glyphicon glyphicon-earphone"></i>&nbsp;519-400-1953</p>
+
+        <%= partial "contact_form" %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary submit-form">Send</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script type="text/javascript">
+  $(function(){
+    $('#contact_modal input[type="submit"]').hide();
+    $('#contact_modal .submit-form').click(function(){
+      $('#contact_modal form').submit();
+      return false;
+    });
+  });
+</script>

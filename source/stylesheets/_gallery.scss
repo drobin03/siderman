@@ -1,0 +1,9 @@
+.gallery-container { padding-right:5px; } /* Padding is included in last image */
+.gallery {
+  a {
+    -webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-touch-callout:none; display:block; float:left; line-height:0;
+    margin:0 10px 10px 0;
+    &:first-child { margin-left:0; }
+  }
+  img { max-width:100%; width:auto; height:auto; }
+}

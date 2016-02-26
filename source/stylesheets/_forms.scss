@@ -1,5 +1,6 @@
-input { background:transparent; color:white; border:2px solid white; font-weight:bold; padding:3px 5px; margin-bottom:0.5em; width:100%; }
-input[type="submit"] { background:$siderman-blue; color:white; width:auto; }
+input, textarea { background:transparent; color:white; border:2px solid white; font-weight:bold; padding:3px 5px; margin-bottom:0.5em; width:100%; }
+input[type="submit"],
+input[type="submit"]:hover { background:$siderman-blue; color:white; width:auto; }
 
 ::-webkit-input-placeholder {
   color: white;
@@ -12,4 +13,21 @@ input[type="submit"] { background:$siderman-blue; color:white; width:auto; }
 }
 :-ms-input-placeholder {
   color: white;
+}
+
+.modal {
+  input, textarea { color:$siderman-black; border-color:$siderman-black; }
+  $lighter-black: lighten($siderman-black, 10%);
+  ::-webkit-input-placeholder {
+    color: $lighter-black;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: $lighter-black;
+  }
+  ::-moz-placeholder {  /* Firefox 19+ */
+    color: $lighter-black;
+  }
+  :-ms-input-placeholder {
+    color: $lighter-black;
+  }
 }

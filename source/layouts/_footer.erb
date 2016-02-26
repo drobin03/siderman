@@ -8,49 +8,27 @@
         <a href="#" class="youtube"></a>
       </div> -->
       <div class="row">
-        <div class="col-md-4">
-          <h3>Our Location</h3>
-          <p>Please contact us to book your appointment.</p>
-          <p>GENERAL INFO</p>
-          <p>
-            T: 705-286-0019<br>
-            F: 705-286-0707<br>
-            E: <a href="mailto:siderman08@gmail.com" style="color:inherit;">siderman08@gmail.com</a>
-          </p>
-          <p>ADDRESS</p>
-          <address>
-            P.O. Box 542<br>
-            Minden, ON,<br>
-            K0M 2K0
-          </address>
-        </div>
-        <div class="col-md-2">
-          <h3>Sitemap</h3>
-          <ul>
-            <li><a href="#top">Home</a></li>
-            <li><a href="#our-company">Our Company</a></li>
-            <li><a href="#our-team">Our Team</a></li>
-            <li><a href="#our-services">Our Services</a></li>
-            <li><a href="#contact-us">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3">
+        <div class="col-md-6">
           <h3>Contact Us</h3>
           <p>Want to increase the value of your house?</p>
           <p>Sign up here for a free quote:</p>
-          <form action="http://formspree.io/siderman08@gmail.com" method="POST">
-            <input type="text" placeholder="FIRST NAME" name="first_name" />
-            <input type="text" placeholder="LAST NAME" name="last_name" />
-            <input type="email" placeholder="EMAIL ADDRESS" name="email" />
-            <input type="hidden" name="_next" value="<%= url_for '/?show_message=true' %>" />
-            <input type="hidden" name="_subject" value="New contact from Siderman website form" />
-            <input type="submit" value="SUBMIT" class="btn" />
-          </form>
+          <%= partial "contact_form" %>
         </div>
-        <div class="col-md-3">
-          <h3><%= image_tag 'logo.jpg' %></h3>
+        <div class="col-md-6">
+          <h3>Our Location</h3>
+          <p>Please contact us to book your appointment.</p>
+          <p>
+            <a href="tel:519-400-1953"><i class="glyphicon glyphicon-earphone"></i> 519-400-1953</a>
+          </p>
+          <p><%= image_tag 'logo.jpg' %></p>
         </div>
       </div>
     </div>
   </section>
 </footer>
+
+<section>
+  <div class="container">
+    <p style="text-align:center; margin-bottom:0;">&copy; 2015 Siderman Vinyl. All Rights Reserved.</p>
+  </div>
+</section>

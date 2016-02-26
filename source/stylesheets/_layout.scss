@@ -6,6 +6,7 @@
 #body,
 #home { font-size:24px; }
 
+body,
 #body,
 #home,
 #site-footer {
@@ -15,13 +16,18 @@
     &.large-spacing { padding:50px 0; }
     &.black { background:$siderman-black; color:white; }
     &.gray { background:$siderman-gray; }
-    // &.white {
-    //   background:white; color:black; position:relative;
-    //   &:before {
-    //     content:""; display:block; height:32px; width:100%; background:image-url('shadow-light.png'); background-repeat:no-repeat; background-position:center; position:absolute; top:0;
-    //   }
-    //   h2 { color:$xerri-blue; }
-    //   h3 { color:inherit; }
-    // }
   }
 }
+
+a, a:hover { color:inherit; }
+a { font-weight:bold; }
+
+#featured_image img { width:100%; }
+
+.modal {
+  .modal-content { border:5px solid $siderman-black; font-size:21px; }
+  .modal-header,
+  .modal-footer { border-color:$siderman-black; }
+}
+
+.email-message { position:absolute; top:100%; right:0; margin:15px 10px; border-radius:3px; background:#fff; border-color:$siderman-red; color:$siderman-red; }

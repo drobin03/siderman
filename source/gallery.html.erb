@@ -1,0 +1,39 @@
+---
+title: Gallery
+---
+
+<section style="margin-top:175px; padding-bottom:0;">
+  <div class="container">
+    <h1 style="margin-top:0;">Our Work</h1>
+    <p>Take a look at some of our finished projects:</p>
+  </div>
+</section>
+<section style="padding-top:0;">
+  <div class="container gallery-container">
+    <div class="image-gallery">
+    <%
+      images = [
+        ['1.jpg', '480x640'],
+        ['2.jpg', '640x480'],
+        ['3.jpg', '640x480'],
+        ['4.jpg', '1500x2000'],
+        ['5.jpg', '1500x1125'],
+        ['6.jpg', '1500x1125'],
+        ['7.jpg', '1500x1125'],
+        ['8.jpg', '480x640'],
+        ['9.jpg', '1500x1500'],
+        ['10.jpg', '1500x1500'],
+        ['11.jpg', '1500x1500'],
+        ['12.jpg', '640x480']
+      ]
+    %>
+    <% images.each_with_index do |img, i| %>
+      <% link_to image_path("gallery/#{img[0]}"), data: { index: i, size: img[1] } do %>
+        <%= image_tag "gallery/thumbs/#{img[0]}" %>
+      <% end %>
+    <% end %>
+    </div>
+  </div>
+</section>
+
+<%= partial '_photoswipe_gallery_container' %>

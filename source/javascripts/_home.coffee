@@ -12,7 +12,7 @@ $ ->
       $bottom_left.css('width', width * 0.573)
       $bottom_right.css('width', width * 0.4095)
 
-      $superhero_graphic.css('height', $superhero_graphic.parent().height() + parseInt($superhero_graphic.css('top')) * -1)
-      fill_height = 0; $superhero_graphic.find('img').each -> fill_height += $(this).height()
+      fill_height = 0; $superhero_graphic.find('img').each -> fill_height += ($(this).height() + (parseInt($(this).css('top')) || 0))
       fill_height = $superhero_graphic.height() - fill_height
-      $superhero_graphic.find('.middle').css({ 'height': fill_height, 'top': $superhero_graphic.find('.top').height() })
+      fill_offset_top = $superhero_graphic.find('.top').height() + parseInt($superhero_graphic.find('.top').css('top'))
+      $superhero_graphic.find('.middle').css({ 'height': fill_height, 'top': fill_offset_top })

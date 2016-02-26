@@ -11,6 +11,8 @@
 # Page options, layouts, aliases and proxies
 ###
 
+activate :directory_indexes
+
 # Per-page layout changes:
 #
 # With no layout
@@ -41,11 +43,18 @@ configure :development do
 end
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def nav_item(text, url, options={})
+    content_tag(:li, class: "nav-item #{nav_class_if_active(url)}") do
+      link_to text, url, class: "nav-link"
+    end
+  end
+
+  def nav_class_if_active(url)
+    url = "#{url}/" unless /\/$/ =~ url
+    'active' if url == current_page.url
+  end
+end
 
 set :css_dir, 'stylesheets'
 

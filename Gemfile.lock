@@ -102,6 +102,7 @@ GEM
       rack (>= 1.0)
     rails-assets-jquery (2.1.4)
     rails-assets-jquery-cycle2 (2.1.6)
+    rails-assets-photoswipe (4.1.1)
     rb-fsevent (0.9.6)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -135,5 +136,6 @@ DEPENDENCIES
   bootstrap-sass
   middleman (~> 3.3.10)
   middleman-livereload (~> 3.1.0)
-  rails-assets-jquery!
+  rails-assets-jquery (~> 2.1.4)!
   rails-assets-jquery-cycle2!
+  rails-assets-photoswipe!
