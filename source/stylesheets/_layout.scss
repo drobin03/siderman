@@ -1,10 +1,28 @@
 .align-right { text-align:right; }
 @media (max-width: $screen-sm-max) {
  .align-center-sm { text-align:center; }
+ .align-right { text-align:center; }
 }
 
 #body,
-#home { font-size:24px; }
+#home {
+  font-size:18px;
+  h1 { font-size:27px; }
+  h2 { font-size:22.5px; }
+  h3 { font-size:18px; }
+  @media (min-width: $screen-md-min) {
+    font-size:20px;
+    h1 { font-size:30px; }
+    h2 { font-size:25px; }
+    h3 { font-size:20px; }
+  }
+  @media (min-width: $screen-lg-min) {
+    font-size:24px;
+    h1 { font-size:$font-size-h1; }
+    h2 { font-size:$font-size-h2; }
+    h3 { font-size:$font-size-h3; }
+  }
+}
 
 body,
 #body,

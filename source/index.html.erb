@@ -47,16 +47,18 @@ title: Siderman Vinyl
           <p><%= link_to 'Check out our work', '/gallery' %></p>
         </div>
         <div class="bottom-right">
-          <%= image_tag "home-graphic/testimonials.png" %>
-          <div class="testimonials cycle-slideshow" data-cycle-pause-on-hover="true" data-cycle-slides="> p" data-cycle-swipe="true" data-cycle-timeout="5000">
-            <p>
-              “Thank you for your very professional job.  It looks great.  I will happily recommend your services.”<br>
-              - Rosa
-            </p>
-            <p>
-              “John and his team were so wonderful to work with.”<br>
-              - MK Contracting, Elora
-            </p>
+          <div class="content-box">
+            <%= image_tag "home-graphic/testimonials.png" %>
+            <div class="testimonials cycle-slideshow" data-cycle-pause-on-hover="true" data-cycle-slides="> p" data-cycle-swipe="true" data-cycle-timeout="5000">
+              <p>
+                “Thank you for your very professional job.  It looks great.  I will happily recommend your services.”<br>
+                - Rosa
+              </p>
+              <p>
+                “John and his team were so wonderful to work with.”<br>
+                - MK Contracting, Elora
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -73,5 +75,3 @@ title: Siderman Vinyl
     </div>
   </section>
 </div>
-
-<%= partial "contact_modal" %>

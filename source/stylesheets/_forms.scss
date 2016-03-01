@@ -16,7 +16,7 @@ input[type="submit"]:hover { background:$siderman-blue; color:white; width:auto;
 }
 
 .modal {
-  input, textarea { color:$siderman-black; border-color:$siderman-black; }
+  input, textarea { color:$siderman-black; border-color:$siderman-black; font-weight:normal; border-width:1px; }
   $lighter-black: lighten($siderman-black, 10%);
   ::-webkit-input-placeholder {
     color: $lighter-black;

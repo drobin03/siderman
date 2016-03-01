@@ -1,22 +1,40 @@
 #home_graphic {
   > div {
-    border:10px solid $siderman-black; position:relative; padding:0px 50px;
-    &.top { background:$siderman-gray; padding-top:90px; padding-bottom:10px; border-bottom:0; }
-    &.middle { border:0; padding:0; }
-    &.bottom-left { background:$siderman-black; color:white; float:left; border-top:0; padding-top:60px; padding-bottom:10px; }
-    &.bottom-right { background:$siderman-red; float:right; border-top:0; padding:40px 10px 0px 50px; margin-top:-23px; }
+    border:10px solid $siderman-black; position:relative; padding:0px 50px; margin-bottom:20px;
+    &.top { background:$siderman-gray; padding-top:90px; padding-bottom:10px; }
+    &.middle { display:none; }
+    &.bottom-left { background:$siderman-black; color:white; padding-top:60px; padding-bottom:10px; }
+    &.bottom-right { height:301px; background:$siderman-red; padding:0; padding-top:40px; }
 
-    &.top img { position:absolute; top:-30px; left:-30px; }
-    &.middle img { max-width:100%; height:auto; }
-    &.bottom-left img { position:absolute; top:-47px; right:-15px; }
-    &.bottom-right img { position:absolute; margin-top:-80px; margin-left:-40px; width:413px; }
+    img { max-width:100%; height:auto; }
+    &.top img { position:absolute; top:-30px; left:-10px; max-height:110px; }
+    &.bottom-left img { position:absolute; top:-30px; right:-20px; }
+    &.bottom-right .content-box { position:relative; width:413px; max-width:100%; margin:auto; padding:30px; padding-left:50px; }
+    &.bottom-right img { position:absolute; width:100%; top:0; left:0; }
 
     &.top a { color:$siderman-blue; }
     &.bottom-left a { color:$siderman-red; }
     &.bottom-right a { color:white; }
 
-    &.bottom-right .testimonials { position:relative; margin-top:-50px; height:190px; margin-bottom:30px; }
+    &.bottom-right .testimonials { position:relative; height:150px; width:100%; }
     &.bottom-right > p { position:relative; }
+
+    @media (min-width: $screen-sm-min) {
+      &.bottom-right .testimonials { height:190px; }
+      &.top img { left:-30px; }
+    }
+    @media (min-width: $screen-md-min) {
+      margin-bottom:0;
+      &.top { border-bottom:0; }
+      &.middle { display:block; border:0; padding:0; }
+      &.bottom-left { border-top:0; float:left; }
+      &.bottom-right { border-top:0; float:right; margin-top:-23px; padding-left:50px; }
+
+      &.middle img { max-width:100%; height:auto; }
+
+      &.bottom-left img { top:-47px; right:-15px; }
+      &.bottom-right .content-box { margin-top:-40px; margin-left:-40px; max-width:none; }
+    }
   }
 }
 
@@ -24,23 +42,17 @@
   position:relative;
   #superhero-graphic {
     display:none;
-    @media (min-width: $screen-md-min) {
+    @media (min-width: $screen-lg-min) {
       position:absolute; width:100%; display:block; height:100%;
       .container {
         position:relative; height:100%;
         img,
         div.middle {
-          position:absolute; right:0; display:block; width:500px;
+          position:absolute; right:-100px; display:block; width:500px;
           &.top { top:-195px; }
           &.bottom { bottom:0; }
         }
         .middle { background-size:100%; }
-      }
-    }
-    @media (min-width: $screen-lg-min) {
-      .container {
-        img,
-        div.middle { right:-100px; }
       }
     }
   }

@@ -6,13 +6,20 @@ $ ->
   $superhero_graphic = $('#superhero-graphic')
   if $home_graphic.length > 0
     $(window).on 'load resize', ->
-      width = $home_graphic.width()
-      border_width = width / 100
-      $home_graphic_contents.css('border-width', border_width + "px")
-      $bottom_left.css('width', width * 0.573)
-      $bottom_right.css('width', width * 0.4095)
+      if $(window).width() >= 992
+        width = $home_graphic.width()
+        border_width = width / 100
+        $home_graphic_contents.css('border-width', border_width + "px")
+        $bottom_left.css('width', width * 0.573)
+        $bottom_right.css('width', width * 0.4095)
 
-      fill_height = 0; $superhero_graphic.find('img').each -> fill_height += ($(this).height() + (parseInt($(this).css('top')) || 0))
-      fill_height = $superhero_graphic.height() - fill_height
-      fill_offset_top = $superhero_graphic.find('.top').height() + parseInt($superhero_graphic.find('.top').css('top'))
-      $superhero_graphic.find('.middle').css({ 'height': fill_height, 'top': fill_offset_top })
+        fill_height = 0; $superhero_graphic.find('img').each -> fill_height += $(this).height()
+
+        top_offset = parseInt($superhero_graphic.find('.top').css('top'))
+        fill_height = fill_height + top_offset
+        fill_height = $superhero_graphic.height() - fill_height
+        fill_offset_top = $superhero_graphic.find('.top').height() + top_offset
+        $superhero_graphic.find('.middle').css({ 'height': fill_height, 'top': fill_offset_top })
+      else
+        $bottom_left.css('width', 'auto')
+        $bottom_right.css('width', 'auto')

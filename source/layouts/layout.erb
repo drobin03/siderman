@@ -24,15 +24,15 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">
-              <%= image_tag 'logo.png' %>
+            <a class="navbar-brand" href="/">
+              <%= image_tag 'logo-straight.png' %>
             </a>
           </div>
           <div class="collapse navbar-collapse" id="main-nav">
             <ul class="nav navbar-nav navbar-right">
               <%= nav_item 'HOME', '/' %>
-              <%= nav_item 'ABOUT US', '#about' %>
-              <%= nav_item 'OUR SERVICES', '#services' %>
+              <%= nav_item 'ABOUT US', '/#about' %>
+              <%= nav_item 'OUR SERVICES', '/#services' %>
               <%= nav_item 'GALLERY', '/gallery' %>
               <li><a href="javascript:void();" class="nav-link" data-toggle="modal" data-target="#contact_modal">CONTACT US</a></li>
             </ul>
@@ -52,5 +52,6 @@
     </div>
 
     <%= partial 'layouts/footer' %>
+    <%= partial 'contact_modal' %>
   </body>
 </html>
