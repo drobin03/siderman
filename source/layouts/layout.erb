@@ -13,7 +13,7 @@
     <%= javascript_include_tag  "all" %>
   </head>
 
-  <body class="<%= page_classes %>">
+  <body id="top" class="<%= page_classes %>" data-spy="scroll" data-target="#main-nav" data-offset="60">
     <header>
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -33,9 +33,10 @@
           </div>
           <div class="collapse navbar-collapse" id="main-nav">
             <ul class="nav navbar-nav">
-              <%= nav_item 'HOME', '/index.html' %>
-              <%= nav_item 'ABOUT US', '/index.html#about' %>
-              <%= nav_item 'OUR SERVICES', '/index.html#services' %>
+              <% prefix = '/index.html' if current_page.path != 'index.html' %>
+              <%= nav_item 'HOME', "#{prefix}#top" %>
+              <%= nav_item 'ABOUT US', "#{prefix}#about" %>
+              <%= nav_item 'OUR SERVICES', "#{prefix}#services" %>
               <%= nav_item 'GALLERY', 'gallery' %>
               <li><a href="javascript:void();" class="nav-link" data-toggle="modal" data-target="#contact_modal">CONTACT US</a></li>
             </ul>
