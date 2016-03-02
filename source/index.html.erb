@@ -8,7 +8,7 @@ title: Siderman Vinyl
   <div id="superhero-graphic">
     <div class="container">
       <%= image_tag 'superhero/top.png', class: 'top' %>
-      <div class='middle' style="background-image:url('../images/superhero/middle.png');"></div>
+      <div class='middle' style="background-image:url(<%= image_path('superhero/middle.png') %>);"></div>
       <%= image_tag 'superhero/bottom.png', class: 'bottom' %>
     </div>
   </div>
