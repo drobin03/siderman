@@ -16,7 +16,7 @@ set :relative_links, true
 # Page options, layouts, aliases and proxies
 ###
 
-# activate :directory_indexes
+activate :directory_indexes
 
 # Per-page layout changes:
 #
@@ -52,8 +52,7 @@ helpers do
 
   def nav_class_if_active(url)
     url = url.sub(/index\.html$/, '')
-    # url = "#{url}/" unless /\/$/ =~ url
-    'active' if url == current_resource.url
+    'active' if url == current_page.path.sub(/\.html$/, '')
   end
 
   def nav_classes_for(url)
