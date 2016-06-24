@@ -1,23 +1,28 @@
 .navbar-fixed-top {
-  font-weight:300; font-size:18px;
+  font-weight:300; font-size:18px; background:image_url('chrome-background.jpg'); background-size:cover;
   .navbar-brand-lg { display:none; }
   .navbar-brand {
-    padding-top:7px; padding-bottom:7px;
-    img { max-width:100%; max-height:100%; }
+    width:25%; position:relative; padding:0; margin-left:0 !important; margin-right:10px;
+    img { max-width:100%; position:absolute; top:50%; transform:translateY(-50%); }
+  }
+  #navigation { background:rgba(0,0,0,0.1); border-top:2px solid rgba(0,0,0,0.25); }
+  #superhero {
+    display:block; position:absolute; right:0; top:0; height:100%;
+  }
+  &.small {
+    #navigation { border-top:0; }
+    #superhero { display:none; }
   }
 }
 
 @media (min-width: $screen-sm-min) {
   .navbar-fixed-top {
-    font-size:16px; transition:padding 0.5s ease-in-out; text-align:center;
+    font-size:16px; transition:padding 0.5s ease-in-out;
     .navbar-brand { display:none; }
     .navbar-brand-lg {
       display:block; padding-top:15px;
-      img { max-width:100%; max-height:100%; width:325px; margin:auto; }
-      // position:absolute; padding:0; display:block;
-      // top:20px; height:110%;
-      // top:50%; transform:translateY(-50%); // max-height:50%; max-width:200px;
-      // width:400px; height:auto;
+      img { height:70px; }
+      img#your-vinyl-superhero { height:auto; width:50%; margin-top:20px; }
     }
     .navbar-nav { display:inline-block; float:none; vertical-align:top; }
     ul li:hover, ul li.active {
@@ -39,8 +44,17 @@
   .navbar-fixed-top {
     font-size:18px;
     ul li a { padding-left:30px; padding-right:30px; }
-   }
+    .navbar-brand-lg img { height:90px; }
+  }
 }
+
+@media (min-width: $screen-lg-min) {
+  .navbar-fixed-top .navbar-brand-lg {
+    padding:20px 0;
+    img { height:90px; }
+  }
+}
+
 nav a { font-weight:normal; }
 
 footer {
