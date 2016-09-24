@@ -95,3 +95,11 @@ $ ->
   hashData = photoswipeParseHash()
   if hashData.pid && hashData.gid
     openPhotoSwipe( hashData.pid ,  $('.image-gallery[data-pswp-uid=' + hashData.gid.toString() + ']'), true, true )
+
+  $grid = $('.image-gallery')
+  $grid.packery({
+    itemSelector: 'a',
+    gutter: 10
+  });
+  $grid.imagesLoaded().progress ->
+    $grid.packery()

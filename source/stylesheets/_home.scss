@@ -22,7 +22,7 @@
 #testimonials,
 #suppliers,
 #contact {
-  padding:75px 0; text-align:center;
+  @extend .padded; text-align:center;
   h2 { margin-top:0; margin-bottom:1em; }
 }
 

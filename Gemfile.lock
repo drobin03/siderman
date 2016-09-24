@@ -112,8 +112,20 @@ GEM
       rack (>= 1.0)
     rails-assets-appear (0.3.6)
       rails-assets-jquery (>= 1.5)
+    rails-assets-desandro-matches-selector (2.0.1)
+    rails-assets-ev-emitter (1.0.3)
+    rails-assets-fizzy-ui-utils (2.0.3)
+      rails-assets-desandro-matches-selector (~> 2.0.0)
+    rails-assets-get-size (2.0.2)
     rails-assets-jquery (2.1.4)
     rails-assets-jquery-cycle2 (2.1.6)
+    rails-assets-outlayer (2.1.0)
+      rails-assets-ev-emitter (>= 1.0.0, < 2)
+      rails-assets-fizzy-ui-utils (>= 2.0.0, < 3)
+      rails-assets-get-size (>= 2.0.2, < 3)
+    rails-assets-packery (2.1.1)
+      rails-assets-get-size (>= 2.0.2, < 3)
+      rails-assets-outlayer (>= 2.0.0, < 3)
     rails-assets-photoswipe (4.1.1)
     rake (10.4.2)
     rb-fsevent (0.9.6)
@@ -154,5 +166,6 @@ DEPENDENCIES
   rails-assets-appear!
   rails-assets-jquery (~> 2.1.4)!
   rails-assets-jquery-cycle2!
+  rails-assets-packery!
   rails-assets-photoswipe!
   rake
