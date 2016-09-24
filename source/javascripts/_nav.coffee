@@ -8,12 +8,10 @@ getUrlParameter = (sParam) ->
       return true
 
 $ ->
-  $navbar = $('.navbar-fixed-top');
+  $navbar = $('.navbar-fixed-top')
+  $navbar_height = $navbar.outerHeight()
   $(window).on 'scroll', ->
-    if $(window).scrollTop() > 150
-      $navbar.addClass('small')
-    else
-      $navbar.removeClass('small')
+    $navbar.toggleClass('scrolled-past', $(window).scrollTop() > $navbar_height)
 
   # Smooth scroll
   $('a[href*=#]:not([href=#])').click ->

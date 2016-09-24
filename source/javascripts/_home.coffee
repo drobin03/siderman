@@ -1,4 +1,12 @@
 $ ->
+  $animations = $('#banner, #services')
+  $animations.appear()
+  $animations.on 'appear', ->
+    offset = $(this).offset().top + Math.min(300, $(this).height()/2)
+    if $(window).height() + $(window).scrollTop() > offset
+      $(this).addClass('in-view')
+  $.force_appear()
+
   $home_graphic = $('#home_graphic')
   $home_graphic_contents = $home_graphic.find('> div')
   $bottom_left = $home_graphic.find('.bottom-left')

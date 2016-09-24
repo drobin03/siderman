@@ -1,0 +1,72 @@
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@mixin main-section-padding() {
+  padding-top: 40px; padding-bottom: 40px;
+  @media (min-width: $screen-md-min) {
+    padding-top: 80px; padding-bottom: 80px;
+  }
+  &.tight { padding-top: 40px; padding-bottom: 40px; }
+}
+
+@mixin complete-translate-animation() {
+  // Catchall rather than having to @extend .in-view, you can include complete-animation() (using @extend seemed to be too hard-hitting)
+  transform:translate(0,0); opacity:1;
+}
+@mixin complete-scale-animation() {
+  transform:scale(1); opacity:1;
+}
+
+// Animations
+@mixin fade-in-from-top() {
+  transform:translate(0,-65px); transition:all 1s; opacity:0;
+  &.in-view { transform:translate(0,0); opacity:1; }
+}
+@mixin fade-in-from-bottom($delay:0s) {
+  transform:translate(0,65px); transition:all 1s; opacity:0; transition-delay:$delay;
+  &.in-view { transform:translate(0,0); opacity:1; }
+}
+@mixin fade-in-from-left() {
+  transform:translate(-65px, 0); transition:all 1s; opacity:0;
+  &.in-view { transform:translate(0, 0); opacity:1; }
+}
+@mixin fade-in-from-right() {
+  transform:translate(65px, 0); transition:all 1s; opacity:0;
+  &.in-view { transform:translate(0,0); opacity:1; }
+}
+@mixin scale-up() {
+  transform:scale(0); transition:transform 1s;
+  &.in-view { transform:scale(1); }
+}
+@mixin mobile-fade-in-from-top() {
+  @media (max-width: $screen-xs-max) {
+    @include fade-in-from-top();
+  }
+}
+@mixin mobile-fade-in-from-bottom() {
+  @media (max-width: $screen-xs-max) {
+    @include fade-in-from-bottom();
+  }
+}
+@mixin domino-from-bottom($num_elements: 4) {
+  transition:all 2s; opacity:0;
+  @for $i from 1 through $num_elements {
+    $multiplier: $i - 1;
+    &:nth-child(#{$i}) { transform:translate(0, 65px + (100*$multiplier)); }
+  }
+  &.in-view { transform:translate(0,0); opacity:1; }
+}
+@mixin domino-from-left() {
+  transition:all 1s;
+  @for $i from 1 through 4 {
+    $multiplier: $i - 1;
+    $inverse-multiplier: 3 - $multiplier;
+    // $translate: "#{-(100 - (10*$multiplier))}";
+    &:nth-child(#{$i}) { transform:translate(-400%, 0); transition-delay:0s + $inverse-multiplier * 0.25; }
+  }
+  &.in-view { transform:translate(0, 0); }
+}

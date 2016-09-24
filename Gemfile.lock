@@ -40,6 +40,8 @@ GEM
     eventmachine (1.0.8)
     execjs (2.6.0)
     ffi (1.9.10)
+    font-awesome-middleman (4.5.0)
+      middleman-core (~> 3.0)
     haml (4.0.7)
       tilt
     hike (1.2.3)
@@ -108,6 +110,8 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rails-assets-appear (0.3.6)
+      rails-assets-jquery (>= 1.5)
     rails-assets-jquery (2.1.4)
     rails-assets-jquery-cycle2 (2.1.6)
     rails-assets-photoswipe (4.1.1)
@@ -143,9 +147,11 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass
+  font-awesome-middleman
   middleman (~> 3.3.10)
   middleman-deploy (~> 1.0)
   middleman-livereload (~> 3.1.0)
+  rails-assets-appear!
   rails-assets-jquery (~> 2.1.4)!
   rails-assets-jquery-cycle2!
   rails-assets-photoswipe!

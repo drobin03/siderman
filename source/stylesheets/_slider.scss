@@ -4,25 +4,27 @@
     position:relative; max-width:100%;
     img {display: block; min-width:0; max-width:100%; }
     .overlay {
+      position:absolute; top:50%; transform:translateY(-50%); text-align:center; width:100%;
       .text {
-        padding:15px 0;
-        p { margin: 0.5em 0; }
+        padding:20px; display:inline-block; background:$siderman-black; color:#fff;
+        p { margin:0; }
+        a { color:$siderman-red; }
       }
     }
 
-    @media (min-width: $screen-md-min) {
-      .overlay {
-        position:absolute; top:150px; width:100%;
-        .text {
-          padding:25px 42px 0 0; width:452px;
-          text-shadow:0 0 3px #fff;
-          a { color:white; text-shadow:none; }
-        }
-      }
-    }
-    @media (min-width: $screen-lg-min) {
-      .overlay .text { background:transparent; text-shadow:none; }
-    }
+    // @media (min-width: $screen-md-min) {
+    //   .overlay {
+    //     position:absolute; top:50px; width:100%;
+    //     .text {
+    //       padding:25px 42px 0 0; width:452px;
+    //       text-shadow:0 0 3px #fff;
+    //       a { color:white; text-shadow:none; }
+    //     }
+    //   }
+    // }
+    // @media (min-width: $screen-lg-min) {
+    //   .overlay .text { background:transparent; text-shadow:none; }
+    // }
   }
 }
 .pager {
@@ -44,5 +46,5 @@
 }
 
 .testimonials {
-  .cycle-slide { top:50% !important; transform:translateY(-50%); }
+  .cycle-slide { top:50% !important; transform:translateY(-50%); width:100%; }
 }

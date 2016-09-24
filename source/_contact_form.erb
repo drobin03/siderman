@@ -1,10 +1,22 @@
 <!-- siderman08@gmail.com -->
-<form action="http://formspree.io/d.robinson004@gmail.com" method="POST">
-  <input type="text" placeholder="FIRST NAME" name="first_name" />
-  <input type="text" placeholder="LAST NAME" name="last_name" />
-  <input type="email" placeholder="EMAIL ADDRESS" name="email" />
-  <textarea placeholder="MESSAGE" name="message"></textarea>
+<form class="form" action="http://formspree.io/d.robinson004@gmail.com" method="POST">
+  <div class="form-group">
+    <label for="first_name">First Name</label>
+    <input class="form-control" type="text" placeholder="First Name" name="first_name" />
+  </div>
+  <div class="form-group">
+    <label for="first_name">Last Name</label>
+    <input class="form-control" type="text" placeholder="Last Name" name="last_name" />
+  </div>
+  <div class="form-group">
+    <label for="first_name">Email</label>
+    <input class="form-control" type="email" placeholder="Email Address" name="email" />
+  </div>
+  <div class="form-group">
+    <label for="first_name">Message</label>
+    <textarea class="form-control" placeholder="Tell us a little about your project..." name="message"></textarea>
+  </div>
   <input type="hidden" name="_next" value="<%= url_for '/?show_message=true' %>" />
   <input type="hidden" name="_subject" value="New contact from Siderman website form" />
-  <input type="submit" value="SUBMIT" class="btn" />
+  <input type="submit" value="SUBMIT" class="btn btn-primary" />
 </form>

@@ -1,3 +1,11 @@
 .btn {
+  border-width:2px; padding:10px 30px;
   &.blue { background:$siderman-blue; color:white; }
+  &.btn-primary {
+    &:hover { color:#fff; background:$siderman-red; }
+  }
+  &.btn-grey {
+    border-color:#606164; background:rgba(255,255,255,0.2); margin-top:10px;
+    &:hover { background-color:#606164; color:#fff; }
+  }
 }

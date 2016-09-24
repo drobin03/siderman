@@ -1,6 +1,7 @@
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
+set :fonts_dir,  'fonts'
 set :relative_links, true
 
 ###
@@ -17,6 +18,8 @@ set :relative_links, true
 ###
 
 activate :directory_indexes
+
+activate :livereload
 
 # Per-page layout changes:
 #

@@ -1,59 +1,64 @@
-#home_graphic {
-  > div {
-    border:10px solid $siderman-black; position:relative; padding:0px 50px; margin-bottom:20px;
-    &.top { background:$siderman-gray; padding-top:90px; padding-bottom:10px; }
-    &.middle { display:none; }
-    &.bottom-left { background:$siderman-black; color:white; padding-top:60px; padding-bottom:10px; }
-    &.bottom-right { height:301px; background:$siderman-red; padding:0; padding-top:40px; }
-
-    img { max-width:100%; height:auto; }
-    &.top img { position:absolute; top:-30px; left:-10px; max-height:110px; }
-    &.bottom-left img { position:absolute; top:-30px; right:-20px; }
-    &.bottom-right .content-box { position:relative; width:413px; max-width:100%; margin:auto; padding:30px; padding-left:50px; }
-    &.bottom-right img { position:absolute; width:100%; top:0; left:0; }
-
-    &.top a { color:$siderman-blue; }
-    &.bottom-left a { color:$siderman-red; }
-    &.bottom-right a { color:white; }
-
-    &.bottom-right .testimonials { position:relative; height:150px; width:100%; }
-    &.bottom-right > p { position:relative; }
-
-    @media (min-width: $screen-sm-min) {
-      &.bottom-right .testimonials { height:190px; }
-      &.top img { left:-30px; }
+.cycle-slideshow p { font-weight:400; }
+#banner {
+  background:image_url('chrome-background.jpg'); background-size:cover; position:relative; box-shadow:1px 1px 20px;
+  min-height:400px;
+  .text {
+    @include make-sm-column(7);
+    @media (min-width:$screen-sm-min) {
+      padding-top:100px;
     }
-    @media (min-width: $screen-md-min) {
-      margin-bottom:0;
-      &.top { border-bottom:0; }
-      &.middle { display:block; border:0; padding:0; }
-      &.bottom-left { border-top:0; float:left; }
-      &.bottom-right { border-top:0; float:right; margin-top:-23px; padding-left:50px; }
-
-      &.middle img { max-width:100%; height:auto; }
-
-      &.bottom-left img { top:-47px; right:-15px; }
-      &.bottom-right .content-box { margin-top:-40px; margin-left:-40px; max-width:none; }
+    h2 { text-shadow: 0 1px 0 #fff; color: #606164; }
+  }
+  img {
+    position:absolute; top:30px; right:0;
+    &.superhero {
+      transform:translate(400%, 0); transition:all 1s;
     }
   }
+  &.in-view img.superhero { transform:translate(0,0); }
+}
+#who-we-are,
+#services,
+#testimonials,
+#suppliers,
+#contact {
+  padding:75px 0; text-align:center;
+  h2 { margin-top:0; margin-bottom:1em; }
 }
 
-#home {
-  position:relative;
-  #superhero-graphic {
-    display:none;
-    @media (min-width: $screen-lg-min) {
-      position:absolute; width:100%; display:block; height:100%;
-      .container {
-        position:relative; height:100%;
-        img,
-        div.middle {
-          position:absolute; right:-100px; display:block; width:500px;
-          &.top { top:-195px; }
-          &.bottom { bottom:0; }
-        }
-        .middle { background-size:100%; }
-      }
-    }
+#who-we-are {
+  text-align:left;
+  h2 { text-align:center; }
+}
+
+#services {
+  background:$siderman-grey; text-align:center;
+  @media (min-width:$screen-sm-min) {
+    // .film-strip { transform:translateX(-100%); transition:transform 2s cubic-bezier(0.22, 0.61, 0.36, 1); }
+    .service-item { @include domino-from-left(); }
+  }
+  &.in-view .service-item { @include complete-translate-animation(); }
+  .service-item { @extend .col-xs-6; @extend .col-sm-3; padding-top:$grid-gutter-width/2; padding-bottom:$grid-gutter-width/2; }
+  .image-wrapper {
+    overflow:hidden; display:block;
+    img { transition:transform 0.5s; }
+    &:hover img { transform:scale(1.05); }
+  }
+
+}
+
+#testimonials { background:$siderman-grey; }
+
+#suppliers {
+  .logos img { max-height:70px; margin:10px 20px; }
+  // ul.logos {
+  //   @include list-unstyled;
+  //   li { @extend .col-xs-4; text-align:center; }
+  // }
+}
+
+#contact {
+  form {
+    max-width:500px; margin:auto;
   }
 }

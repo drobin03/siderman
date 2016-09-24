@@ -2,69 +2,95 @@
 title: Siderman Vinyl
 ---
 
-<%= partial 'carousel' %>
 
 <div id="home">
-  <section class="large-spacing black">
-    <div class="container align-center-sm">
+  <section id="banner">
+    <div class="container">
       <div class="row">
-        <div class="col-md-9">
-          <h2 style="margin:0;line-height:40px;">Learn more about how Siderman can save the day.</h2>
+        <div class="text">
+          <h2>Your Siding Superhero</h2>
+          <p>Siderman is your siding superhero! We handle all of your siding needs, including soffats and aluminum work!</p>
+          <p><a href="javascript:void();" class="btn btn-grey" data-toggle="modal" data-target="#contact_modal">Get in Touch</a></p>
         </div>
-        <div class="col-md-3 align-right">
-          <button class="btn btn-lg blue" data-toggle="modal" data-target="#contact_modal">CLICK HERE!</button>
-        </div>
+        <%= image_tag "superhero/background.png" %>
+        <%= image_tag "superhero/superhero.png", class: 'superhero' %>
       </div>
     </div>
   </section>
-
-  <section class="large-spacing">
+  <section id="who-we-are">
     <div class="container">
-      <div id="home_graphic">
-        <div id="about" class="top">
-          <%= image_tag "home-graphic/who-are-we.png", width: "400px", height: "110px", alt: "Who Are We?" %>
+      <h2>Who We Are</h2>
+      <div class="row">
+        <div class="col-sm-6">
+          <%= image_tag "team-photo.jpg" %>
+        </div>
+        <div class="col-sm-6">
           <p>Siderman is a locally owned and operated company serving the Golden Triangle area. Quality is our top priority, which is why we source products from locally made, top of the line suppliers.</p>
           <p>Customer satisfaction is extremely important to us, which is why we partner with each customer to carry out the vision they have for their home.  Our goal is to deliver a service that exceeds your expectation!</p>
           <p>If you are looking to increase the value of your house or complete your dream renovation feel free to <a href="javascript:void(0);" data-toggle="modal" data-target="#contact_modal">contact us</a> today!</p>
         </div>
-        <div class="middle"><%= image_tag 'home-graphic/middle.png' %></div>
-        <div id="services" class="bottom-left">
-          <%= image_tag "home-graphic/our-services.png", width: "415px", height: "92px", alt: "Our Services" %>
-          <p>We offer the following services:</p>
-          <ul style="font-size:18px;">
-            <li>Horizontal and vertical vinyl siding</li>
-            <li>board and batten, cedar shake and scallop siding</li>
-            <li>Eavstrough, soffat and facia installation</li>
-            <li>Custom cladding</li>
-          </ul>
-          <p><%= link_to 'Check out our work', '/gallery' %></p>
-        </div>
-        <div class="bottom-right">
-          <div class="content-box">
-            <%= image_tag "home-graphic/testimonials.png" %>
-            <div class="testimonials cycle-slideshow" data-cycle-pause-on-hover="true" data-cycle-slides="> p" data-cycle-swipe="true" data-cycle-timeout="5000">
-              <p>
-                “Thank you for your very professional job.  It looks great.  I will happily recommend your services.”<br>
-                - Rosa
-              </p>
-              <p>
-                “John and his team were so wonderful to work with.”<br>
-                - MK Contracting, Elora
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
-  <section class="large-spacing gray">
-    <div class="container" style="text-align:center;">
-      <p>
-        <i>
-          <b>&ldquo;A hero is an ordinary individual who ﬁnds the strength to persevere and endure in spite of overwhelming obstacles.&rdquo;</b><br>
-          Christopher Reeve
-        </i>
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="service-items">
+        <div class="service-item">
+          <span class="image-wrapper"><%= image_tag 'services/cement.jpg' %></span>
+          <p>Cement</p>
+        </div>
+        <div class="service-item">
+          <span class="image-wrapper"><%= image_tag 'services/wood.jpg' %></span>
+          <p>Wood Board</p>
+        </div>
+        <div class="service-item">
+          <span class="image-wrapper"><%= image_tag 'services/vinyl.jpg' %></span>
+          <p>Vinyl</p>
+        </div>
+        <div class="service-item">
+          <span class="image-wrapper"><%= image_tag 'services/soffit.jpg' %></span>
+          <p>Aluminum, Soffats, Fascia</p>
+        </div>
+      </div>
+      <p><b><i>Check out some of our recent work</i></b></p>
+      <p><%= link_to 'View Gallery', '/gallery', class: 'btn btn-lg btn-primary' %></p>
+    </div>
+  </section>
+  <section id="suppliers">
+    <div class="container">
+      <h2>Suppliers</h2>
+      <p>We deal with high-quality materials from these great providers:</p>
+      <p class="logos">
+        <a href="http://www.maibec.com/" target="_blank"><%= image_tag 'suppliers/maibec.png', alt: 'Maibec' %></a>
+        <a href="http://www.mittenbp.com/" target="_blank"><%= image_tag 'suppliers/mitten.png', alt: 'Mitten' %></a>
+        <a href="http://www.jameshardie.ca/" target="_blank"><%= image_tag 'suppliers/james-hardie.png', alt: 'James Hardie' %></a>
       </p>
+    </div>
+  </section>
+  <section id="testimonials">
+    <div class="container">
+      <div class="testimonials cycle-slideshow" data-cycle-pause-on-hover="true" data-cycle-slides="> p" data-cycle-swipe="true" data-cycle-timeout="5000">
+        <p>
+          <i>
+            <b>“Thank you for your very professional job.  It looks great.  I will happily recommend your services.”</b><br>
+            Rosa
+          </i>
+        </p>
+        <p>
+          <i>
+            <b>“John and his team were so wonderful to work with.”</b><br>
+            MK Contracting, Elora
+          </i>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="container">
+      <h3>Ready to increase the value of your home?</h3>
+      <p>Contact us for a free quote today!</p>
+      <%= partial "contact_form" %>
     </div>
   </section>
 </div>
