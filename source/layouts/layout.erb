@@ -33,10 +33,11 @@
               <ul class="nav navbar-nav">
                 <% prefix = '/index.html' if current_page.path != 'index.html' %>
                 <%= nav_item 'HOME', "#{prefix}#top" %>
-                <%= nav_item 'ABOUT US', "#{prefix}#who-we-are" %>
-                <%= nav_item 'OUR SERVICES', "#{prefix}#services" %>
+                <%= nav_item 'ABOUT', "#{prefix}#who-we-are" %>
+                <%= nav_item 'SERVICES', "#{prefix}#services" %>
                 <%= nav_item 'GALLERY', 'gallery' %>
-                <li><a href="javascript:void();" class="nav-link" data-toggle="modal" data-target="#contact_modal">CONTACT US</a></li>
+                <%= nav_item 'JOIN US', 'join-our-team' %>
+                <li><a href="javascript:void();" class="nav-link" data-toggle="modal" data-target="#contact_modal">CONTACT</a></li>
               </ul>
             </div>
           </div>

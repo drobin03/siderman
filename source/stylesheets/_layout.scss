@@ -38,3 +38,8 @@ a { font-weight:bold; }
 }
 
 .email-message { position:absolute; top:100%; right:0; margin:15px 10px; border-radius:3px; background:#fff; border-color:$siderman-red; color:$siderman-red; }
+
+.banner {
+  position:relative;
+  h1 { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); background:#fff; padding:20px; }
+}
