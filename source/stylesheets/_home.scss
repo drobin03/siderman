@@ -9,11 +9,15 @@
     }
     h2 { text-shadow: 0 1px 0 #fff; color: #606164; }
   }
+  .image { position:relative; overflow:hidden; }
   img {
-    position:absolute; top:30px; right:0;
-    &.superhero {
-      transform:translate(400%, 0); transition:all 1s;
-    }
+    margin-right:-$grid-gutter-width/2;
+    &.superhero { position:absolute; top:0px; right:0; transform:translate(400%, 0); transition:all 1s; }
+  }
+
+  @media (min-width:$screen-sm-min) {
+    .image { position:absolute; top:30px; right:0; }
+    img, img.superhero { margin:0; }
   }
   &.in-view img.superhero { transform:translate(0,0); }
 }

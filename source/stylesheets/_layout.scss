@@ -32,9 +32,7 @@ a { font-weight:bold; }
 #featured_image img { width:100%; }
 
 .modal {
-  .modal-content { border:5px solid $siderman-black; font-size:21px; }
-  .modal-header,
-  .modal-footer { border-color:$siderman-black; }
+  .modal-content { border-radius:$border-radius-small; }
 }
 
 .email-message { position:absolute; top:100%; right:0; margin:15px 10px; border-radius:3px; background:#fff; border-color:$siderman-red; color:$siderman-red; }
@@ -43,3 +41,5 @@ a { font-weight:bold; }
   position:relative;
   h1 { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); background:#fff; padding:20px; }
 }
+
+#banner, .banner { padding-top:50px; }
