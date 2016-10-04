@@ -3,7 +3,7 @@
   // background:image_url('black-siding.jpg'); background-size:cover;
   color:white;
   .navbar-brand {
-    width:25%; position:relative; padding:0; margin-left:0 !important; margin-right:10px;
+    width:50%; max-width:235px; position:relative;
     img { max-width:100%; position:absolute; top:50%; transform:translateY(-50%); }
   }
   &:before { content:''; display:block; position:absolute; top:0; width:100%; height:0px; background:rgba(0,0,0,0.25); transition:height 0.5s ease-in-out; }
@@ -22,7 +22,7 @@ body:not(.index) .navbar-fixed-top:before { height:100%; }
       position:relative;
       // &:before { content:''; display:block; position:absolute; bottom:0; width:100%; height:5px; background:rgba(0,0,0,0.25); transition:height 0.5s ease-in-out; }
     }
-    ul li a { padding-left:15px; padding-right:15px; }
+    ul li a { padding-left:12px; padding-right:12px; }
   }
 }
 @media (min-width: $screen-md-min) {

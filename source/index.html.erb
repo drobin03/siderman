@@ -24,12 +24,17 @@ title: Siderman Vinyl
       <h2>Who We Are</h2>
       <div class="row">
         <div class="col-sm-6">
-          <%= image_tag "team-photo.jpg" %>
+          <p><%= image_tag "about.jpg" %></p>
         </div>
         <div class="col-sm-6">
           <p>Siderman is a locally owned and operated company serving the Golden Triangle area. Quality is our top priority, which is why we source products from locally made, top of the line suppliers.</p>
           <p>Customer satisfaction is extremely important to us, which is why we partner with each customer to carry out the vision they have for their home.  Our goal is to deliver a service that exceeds your expectation!</p>
           <p>If you are looking to increase the value of your house or complete your dream renovation feel free to <a href="javascript:void(0);" data-toggle="modal" data-target="#contact_modal">contact us</a> today!</p>
+          <p>
+            <%= image_tag "signature.png", class:'signature' %><br>
+            John Balfoort<br>
+            Owner
+          </p>
         </div>
       </div>
     </div>
@@ -38,21 +43,31 @@ title: Siderman Vinyl
     <div class="container">
       <h2>Our Services</h2>
       <div class="service-items">
-        <div class="service-item">
-          <span class="image-wrapper"><%= image_tag 'services/cement.jpg' %></span>
-          <p>Cement</p>
+        <h3>Siding</h3>
+        <div class="row siding">
+          <div class="service-item">
+            <span class="image-wrapper"><%= image_tag 'services/cement.jpg' %></span>
+            <p>Hardi Board</p>
+          </div>
+          <div class="service-item">
+            <span class="image-wrapper"><%= image_tag 'services/wood.jpg' %></span>
+            <p>Wood Siding</p>
+          </div>
+          <div class="service-item">
+            <span class="image-wrapper"><%= image_tag 'services/vinyl.jpg' %></span>
+            <p>Vinyl Siding</p>
+          </div>
         </div>
-        <div class="service-item">
-          <span class="image-wrapper"><%= image_tag 'services/wood.jpg' %></span>
-          <p>Wood Board</p>
-        </div>
-        <div class="service-item">
-          <span class="image-wrapper"><%= image_tag 'services/vinyl.jpg' %></span>
-          <p>Vinyl</p>
-        </div>
-        <div class="service-item">
-          <span class="image-wrapper"><%= image_tag 'services/soffit.jpg' %></span>
-          <p>Aluminum, Soffats, Fascia</p>
+        <h3>Aluminum</h3>
+        <div class="row aluminum">
+          <div class="service-item">
+            <span class="image-wrapper"><%= image_tag 'services/soffit-fascia.jpg' %></span>
+            <p>Soffits, Fascia</p>
+          </div>
+          <div class="service-item">
+            <span class="image-wrapper"><%= image_tag 'services/eavestrough.jpg' %></span>
+            <p>Seamless Eavestrough, and Downspouts</p>
+          </div>
         </div>
       </div>
       <p><b><i>Check out some of our recent work</i></b></p>
@@ -66,6 +81,7 @@ title: Siderman Vinyl
       <p class="logos">
         <a href="http://www.maibec.com/" target="_blank"><%= image_tag 'suppliers/maibec.png', alt: 'Maibec' %></a>
         <a href="http://www.mittenbp.com/" target="_blank"><%= image_tag 'suppliers/mitten.png', alt: 'Mitten' %></a>
+        <a href="http://www.buchnermfg.com/" target="_blank"><%= image_tag 'suppliers/buchner.png', alt: 'Buchner Manufacturing' %></a>
         <a href="http://www.jameshardie.ca/" target="_blank"><%= image_tag 'suppliers/james-hardie.png', alt: 'James Hardie' %></a>
       </p>
     </div>

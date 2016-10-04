@@ -62,7 +62,7 @@
 }
 @mixin domino-from-left() {
   transition:all 1s;
-  @for $i from 1 through 4 {
+  @for $i from 1 through 5 {
     $multiplier: $i - 1;
     $inverse-multiplier: 3 - $multiplier;
     // $translate: "#{-(100 - (10*$multiplier))}";
