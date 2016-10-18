@@ -59,11 +59,8 @@
 #testimonials { background:$siderman-grey; }
 
 #suppliers {
-  .logos img { max-height:70px; margin:10px 20px; }
-  // ul.logos {
-  //   @include list-unstyled;
-  //   li { @extend .col-xs-4; text-align:center; }
-  // }
+  .logos a { display:inline-block; margin:10px 20px; }
+  .logos img { max-height:70px; }
 }
 
 #contact {
