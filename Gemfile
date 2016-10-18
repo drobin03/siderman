@@ -8,6 +8,7 @@ gem "rake"
 
 gem "bootstrap-sass"
 gem "font-awesome-middleman"
+gem "middleman-favicon-maker", "~> 3.5"
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-jquery', "~> 2.1.4"
